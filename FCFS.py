@@ -5,12 +5,15 @@ Sample Input:
 [7, 4, 1, 4]
 '''
 
+
 def minindex(l):
-    mini = 0;
+    mini = 0
     for i in range(len(l)):
-        if(l[i] < l[mini]): i = mini
-    
+        if (l[i] < l[mini]):
+            i = mini
+
     return mini
+
 
 print("Enter the PID: ")
 pid = eval(input())
@@ -25,7 +28,6 @@ wt = list()
 gt = ['0']
 
 
-
 print("GIVEN:")
 print("PID  AT  BT")
 for i in range(len(pid)):
@@ -33,7 +35,7 @@ for i in range(len(pid)):
 
 for i in range(len(pid)):
     for j in range(len(pid)-1):
-        if at[j] > at[j+1]: 
+        if at[j] > at[j+1]:
             at[j], at[j+1] = at[j+1], at[j]
             bt[j], bt[j+1] = bt[j+1], bt[j]
             pid[j], pid[j+1] = pid[j+1], pid[j]
