@@ -1,4 +1,3 @@
-
 def find_shortest_job(currentTime, at, bt, v):
     job = -1
     for i in range(len(at)):
@@ -8,6 +7,7 @@ def find_shortest_job(currentTime, at, bt, v):
             elif bt[job] > bt[i]:
                 job = i
     return job
+
 
 print("Enter the PID: ")
 pid = eval(input())
@@ -33,7 +33,7 @@ for i in range(len(pid)):
 # sort for at
 for i in range(len(pid)):
     for j in range(len(pid)-1):
-        if at[j] > at[j+1]: 
+        if at[j] > at[j+1]:
             at[j], at[j+1] = at[j+1], at[j]
             bt[j], bt[j+1] = bt[j+1], bt[j]
             pid[j], pid[j+1] = pid[j+1], pid[j]
